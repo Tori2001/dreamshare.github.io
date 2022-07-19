@@ -1,0 +1,843 @@
+@import './base/base';
+@import './base/mixins';
+@import './base/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300&display=swap');
+
+body {
+	background-color: #fff;
+	font-family: 'Montserrat',
+		sans-serif;
+	font-weight: 700;
+}
+
+.promo {
+	@include box(100%, 700px);
+	background-image: url('../images/Bitmap.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 40px 291px 224px 248px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, .8);
+	font-weight: 700;
+	margin-bottom: 95px;
+
+
+	&-header {
+		@include box(100%, 36px);
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 153.5px;
+	}
+
+	&-logo {
+		margin-top: 6px;
+		font-size: 20px;
+	}
+
+	&-menu {
+		display: flex;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	&-linkOne {
+		margin-top: 10px;
+	}
+
+	&-border {
+		@include box(90px, 36px);
+		margin-left: 19px;
+		border: 1px solid #fff;
+		border-radius: 40px;
+		text-align: center;
+		line-height: 33px;
+	}
+
+	&-slogan {
+		@include box(470px, 126px);
+		margin: 0 auto;
+		font-size: 52px;
+		line-height: 63px;
+		text-align: center;
+		margin-bottom: 28.5px;
+	}
+
+	&-miniSlogan {
+		@include box(396px, 25px);
+		margin: 0 auto;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 24px;
+		text-align: center;
+		color: #F7F3F2;
+		margin-bottom: 33px;
+	}
+
+	&-button {
+		@include box(225px, 40px);
+		margin: 0 auto;
+		background-color: $mainColor;
+		border-radius: 40px;
+		font-size: 14px;
+		line-height: 37px;
+		text-align: center;
+	}
+}
+
+.how {
+	@include box(940px, 461px);
+	margin: 0 auto;
+	margin-bottom: 95px;
+
+	&-title {
+		@include box(342px, 32px);
+		margin: 0 auto;
+		font-size: 26px;
+		line-height: 32px;
+		color: #444444;
+		font-weight: 700;
+		margin-bottom: 29px;
+	}
+
+	&-container {
+		@include box(100%, 400px);
+		display: flex;
+		justify-content: space-between;
+		color: #fff;
+	}
+
+	&-step {
+		@include box(300px, 400px);
+		padding: 0 25px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: table;
+		border-radius: 4px;
+	}
+
+	&-step1 {
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step1-min.png');
+		padding-top: 219px;
+	}
+
+	&-step2 {
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step2-min.png');
+		padding-top: 250px;
+	}
+
+	&-step3 {
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step3-min.png');
+		padding-top: 219px;
+	}
+
+	&-button {
+		@include box(70px, 20px);
+		background-color: $mainColor;
+		border-radius: 40px;
+		margin-bottom: 21px;
+		font-size: 10px;
+		line-height: 20px;
+		letter-spacing: 2px;
+		font-weight: 400;
+		text-align: center;
+		z-index: 200;
+	}
+
+	&-titleSmall {
+		font-size: 24px;
+		line-height: 26px;
+		margin-bottom: 24px;
+		z-index: 2;
+	}
+
+	&-text {
+		font-size: 14px;
+		font-family: 'Roboto';
+		font-weight: 300;
+		line-height: 14px;
+		color: #E3E3E3;
+		z-index: 2;
+	}
+}
+
+.meet {
+	@include box(941px, 367px);
+	margin: 0 auto;
+	border: 1px solid rgba(255, 78, 81, 0.15);
+	border-left: none;
+	background-image: linear-gradient(0deg, rgba(255, 78, 81, 0.15) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 78, 81, 0.15) 1px, transparent 1px);
+	background-size: 10.5px 10.5px;
+	margin-bottom: 95px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+	color: #444444;
+
+	&-title {
+		@include box(491px, 32px);
+		margin: 0 auto;
+		font-size: 26px;
+		line-height: 23px;
+		text-align: center;
+		margin-bottom: 35px;
+	}
+
+	&-container {
+		@include box(941px, 205px);
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 55px;
+		position: absolute;
+		z-index: -1;
+	}
+
+	&-person {
+		@include box(221px, 224px);
+	}
+
+	&-img {
+		@include box(120px, 120px);
+		margin: 0 auto;
+		border-radius: 50%;
+		margin-bottom: 14px;
+		position: relative;
+	}
+
+	.fa-brands {
+		@include box(32px, 32px);
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background-color: $mainColor;
+		outline: 4px solid #fff;
+		border-radius: 50%;
+		font-size: 16px;
+		color: #fff;
+		text-align: center;
+		line-height: 33px;
+	}
+
+	.fa-solid {
+		@extend .fa-brands;
+	}
+
+	.fa-paintbrush {
+		background-color: #19D4CA;
+	}
+
+	.fa-camera {
+		background-color: #FFA710;
+	}
+
+	.fa-plane {
+		background-color: #667DF3;
+		transform: rotate(-30deg);
+	}
+
+	&-person1 {
+		background-image: url('../images/person1-min.png');
+	}
+
+	&-person2 {
+		background-image: url('../images/person2-min.png');
+	}
+
+	&-person3 {
+		background-image: url('../images/person3-min.png');
+	}
+
+	&-person4 {
+		background-image: url('../images/person4-min.png');
+	}
+
+	&-name {
+		@include box(100%, 18px);
+		text-align: center;
+		font-size: 14px;
+		line-height: 14px;
+		margin-bottom: 12px;
+	}
+
+	&-story {
+		width: 100%;
+		text-align: center;
+		font-size: 14px;
+		line-height: 14px;
+		font-family: 'Roboto';
+		font-weight: 300;
+	}
+
+	&-button {
+		@include box(180px, 40px);
+		margin: 0 auto;
+		border: 2px solid $mainColor;
+		border-radius: 40px;
+		font-size: 14px;
+		line-height: 35px;
+		text-align: center;
+		color: $mainColor;
+		margin-top: 295px;
+	}
+}
+
+.idea {
+	@include box(940px, 1031px);
+	margin: 0 auto;
+	margin-bottom: 95px;
+
+	&-title {
+		@include box(413px, 32px);
+		margin: 0 auto;
+		font-size: 26px;
+		line-height: 32px;
+		color: #444444;
+		text-align: center;
+		margin-bottom: 35px;
+	}
+
+	&-container {
+		@include box(940px, 970px);
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&-block {
+		@include box(300px, 310px);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 22px;
+		line-height: 27px;
+		color: #fff;
+		text-align: center;
+	}
+
+	&-blockBig {
+		@include box(620px, 310px);
+	}
+
+	&-sport {
+		background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/sport-min.png');
+	}
+
+	&-health {
+		background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/healath-min.png');
+	}
+
+	&-extreme {
+		background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/extreme-min.png');
+	}
+
+	&-games {
+		background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/game-min.png');
+	}
+
+	&-culture {
+		background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/culture-min.png');
+	}
+
+	&-cultureCopy {
+		background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/culture_copy-min.png');
+	}
+
+	&-gamesCopy {
+		background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/games_copy-min.png');
+	}
+}
+
+.interests {
+	@include box(482px, 158px);
+	margin: 0 auto;
+	margin-bottom: 100px;
+
+	&-title {
+		@include box(358px, 32px);
+		margin: 0 auto;
+		font-size: 26px;
+		line-height: 27px;
+		color: #444444;
+		text-align: center;
+		margin-bottom: 43px;
+	}
+
+	&-text {
+		@include box(415px, 24px);
+		margin: 0 auto;
+		font-family: 'Roboto';
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 14px;
+		color: #666666;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	&-container {
+		@include box(482px, 40px);
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-input {
+		@include box(299px, 40px);
+		border: 1px solid #D4D4D4;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+		border-radius: 3px;
+		font-family: 'Roboto';
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 16px;
+		color: #999999;
+		background-color: #fff;
+		padding-left: 14px;
+	}
+
+	&-button {
+		@include box(172px, 40px);
+		background-color: $mainColor;
+		border-radius: 40px;
+		text-align: center;
+		color: #fff;
+		font-size: 14px;
+		line-height: 40px;
+	}
+}
+
+.footer {
+	@include box(1440px, 224px);
+	margin: 0 auto;
+	display: flex;
+	padding: 38px 247px 0 249px;
+	border-top: 2px solid $mainColor;
+	background-color: #fff;
+	margin-bottom: 36px;
+
+	&-logo {
+		@include box(119px, 20px);
+		font-weight: 400;
+		font-size: 16px;
+		color: $mainColor;
+		margin-right: 122px;
+	}
+
+	&-name {
+		@include box(70px, 17px);
+		font-size: 14px;
+		line-height: 17px;
+		color: #444444;
+		margin-bottom: 14px;
+		margin-right: 169px;
+	}
+
+	&-menu {
+		@include box(114px, 156px);
+		font-family: 'Roboto';
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 26px;
+		color: #999999;
+	}
+
+	&-partners {
+		@include box(64px, 17px);
+		font-size: 14px;
+		line-height: 17px;
+		color: #444444;
+		margin-right: 287px;
+	}
+
+	&-text {
+		@include box(84px, 12px);
+		font-size: 10px;
+		line-height: 12px;
+		letter-spacing: 1px;
+		color: #CCCCCC;
+		margin-bottom: 7px;
+		margin-left: 30px;
+	}
+
+	&-img {
+		@include box(110px, 24px);
+		background-image: url('../images/logo-min.png');
+	}
+}
+
+@media screen and (max-width:1439px) and (min-width: 768px) {
+	.promo {
+		height: 700px;
+		padding: 46px 50px 224px 48px;
+	}
+
+	.how {
+		@include box(748px, 461px);
+
+		&-title {
+			@include box(289px, 27px);
+			font-size: 22px;
+			line-height: 27px;
+		}
+
+		&-step {
+			width: 236px;
+			padding-left: 20px;
+		}
+
+		&-step1,
+		&-step3 {
+			padding-top: 205px;
+		}
+
+		&-step1 {
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step1medium.png');
+		}
+
+		&-step3 {
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step3medium.png');
+		}
+
+		&-step2 {
+			padding-top: 255px;
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step2medium.png');
+		}
+
+		&-margin {
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+
+		&-titleSmall {
+			line-height: 14px;
+		}
+	}
+
+	.meet {
+		@include box(492px, 605px);
+		background-image: none;
+		border: none;
+
+		&-title {
+			@include box(415px, 27px);
+			font-size: 22px;
+			line-height: 27px;
+		}
+
+		&-container {
+			@include box(492px, 464px);
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+
+		&-person {
+			width: 236px;
+		}
+
+		&-button {
+			margin-top: 539px;
+		}
+
+	}
+
+	.idea {
+		@include box(748px, 1031px);
+
+		&-title {
+			@include box(350px, 27px);
+			font-size: 22px;
+			line-height: 27px;
+		}
+
+		&-container {
+			@include box(748px, 969px);
+		}
+
+		&-block {
+			@include box(236px, 310px);
+		}
+
+		&-blockBig {
+			width: 492px;
+		}
+
+		&-gamesCopy {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/gamesCopy.png');
+		}
+	}
+
+	.footer {
+		@include box(768px, 224px);
+		margin-bottom: 20px;
+		padding: 38px 37px 0 39px;
+
+		&-logo {
+			margin-right: 108px;
+		}
+
+		&-name {
+			margin-right: 100px;
+		}
+
+		&-partners {
+			margin-right: 118px;
+		}
+	}
+}
+
+@media screen and (max-width:767px) {
+	.promo {
+		height: 540px;
+		padding: 0;
+		padding-top: 30px;
+		margin-bottom: 35px;
+
+		&-header {
+			@include box(153px, 157px);
+			flex-direction: column-reverse;
+			margin: 0 auto;
+			margin-bottom: 26.5px;
+		}
+
+		&-menu {
+			margin-bottom: 97px;
+		}
+
+		&-slogan {
+			@include box(272px, 74px);
+			font-size: 30px;
+			line-height: 37px;
+			margin-bottom: 5.5px;
+		}
+
+		&-miniSlogan {
+			@include box(280px, 49px);
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+
+		&-button {
+			width: 280px;
+		}
+	}
+
+	.how {
+		@include box(300px, 781px);
+
+		&-title {
+			@include box(289px, 27px);
+			font-size: 22px;
+			line-height: 27px;
+			margin-bottom: 15px;
+		}
+
+		&-container {
+			@include box(300px, 740px);
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&-step {
+			@include box(300px, 240px);
+			padding-left: 20px;
+			padding-right: 30px;
+			padding-bottom: 16px;
+		}
+
+		&-step1,
+		&-step3 {
+			padding-top: 64px;
+		}
+
+		&-step2 {
+			padding-top: 95px;
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step2mini.png');
+		}
+
+		&-step1 {
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step1mini.png');
+		}
+
+		&-step3 {
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%), url('../images/step3mini.png');
+		}
+	}
+
+	.meet {
+		@include box(300px, 1050px);
+		margin-bottom: 35px;
+		background-image: none;
+		border: none;
+
+		&-title {
+			@include box(280px, 54px);
+			font-size: 22px;
+			line-height: 27px;
+			margin-bottom: 14px;
+		}
+
+		&-container {
+			@include box(236px, 906px);
+			flex-direction: column-reverse;
+			position: relative;
+			margin: 0 auto;
+			margin-bottom: 36px;
+		}
+
+		&-person {
+			width: 236px;
+		}
+
+		&-order {
+			height: 205px;
+			order: 1;
+		}
+
+		&-order1 {
+			order: -1;
+		}
+
+		&-changeHight {
+			height: 205px;
+		}
+
+		&-button {
+			width: 280px;
+			margin-top: 0;
+		}
+	}
+
+	.idea {
+		@include box(300px, 987px);
+		margin-bottom: 35px;
+
+		&-title {
+			@include box(280px, 54px);
+			font-size: 22px;
+			line-height: 27px;
+			margin-bottom: 33px;
+		}
+
+		&-container {
+			@include box(300px, 900px);
+		}
+
+		&-block {
+			@include box(300px, 120px);
+		}
+
+		&-sport {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/sportMini.png');
+		}
+
+		&-health {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/healthyMini.png');
+		}
+
+		&-extreme {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/extremeMini.png');
+		}
+
+		&-games {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/games.png');
+		}
+
+		&-culture {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/culture.png');
+		}
+
+		&-cultureCopy {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/cultureCopyMini.png');
+		}
+
+		&-gamesCopy {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('../images/gamesCopyMini.png');
+		}
+	}
+
+	.interests {
+		@include box(320px, 192px);
+		margin-bottom: 40px;
+
+		&-title {
+			@include box(280px, 54px);
+			line-height: 27px;
+			margin-bottom: 9px;
+		}
+
+		&-text {
+			@include box(320px, 24px);
+			margin-bottom: 15px;
+		}
+
+		&-container {
+			@include box(280px, 90px);
+			flex-direction: column;
+		}
+
+		&-input,
+		&-button {
+			@include box(280px, 40px);
+		}
+
+	}
+
+	.footer {
+		@include box(320px, 204px);
+		padding: 21px 20px 0 20px;
+		flex-direction: column;
+
+		&-logo {
+			margin: 0 auto;
+			margin-bottom: 13px;
+		}
+
+		&-name {
+			margin: 0 auto;
+			margin-bottom: 1px;
+		}
+
+		&-menu {
+			@include box(280px, 52px);
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 50px;
+			justify-content: space-between;
+			margin-bottom: 6px;
+			margin-bottom: 22px;
+		}
+
+		&-item {
+			margin-left: 10px;
+		}
+
+		&-item1 {
+			margin-right: 10px;
+		}
+
+		&-partners {
+			margin: 0 auto;
+			margin-bottom: 14px;
+		}
+
+		&-text {
+			margin: 0 auto;
+			margin-bottom: 7px;
+		}
+
+		&-designed {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+
+}
